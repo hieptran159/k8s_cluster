@@ -15,15 +15,15 @@ root@dlp:~# cat > /etc/docker/daemon.json <<EOF
 }
 EOF
 
-root@dlp:~# systemctl restart docker
-root@dlp:~# systemctl enable docker
+root@dlp:~# systemctl restart docker  
+root@dlp:~# systemctl enable docker  
 root@dlp:~# cat > /etc/sysctl.d/k8s.conf <<EOF
 net.bridge.bridge-nf-call-ip6tables = 1
 net.bridge.bridge-nf-call-iptables = 1
 EOF
 
-root@dlp:~# sysctl –system
-root@dlp:~# swapoff -a
+root@dlp:~# sysctl –system  
+root@dlp:~# swapoff -a  
 root@dlp:~# vi /etc/fstab
 # comment out swap line
 #/dev/mapper/ubuntu--vg-swap_1 none swap sw 0 0
