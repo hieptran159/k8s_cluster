@@ -43,7 +43,7 @@ sudo apt update
 
 apt -y install kubeadm kubelet kubectl  
 
-#In Master node 
+#In Master node   
 {  
   kubeadm init --apiserver-advertise-address=198.18.1.30 --pod-network-cidr=198.244.0.0/16  
   # set cluster admin user, if you set common user as cluster admin, login with it and run [sudo cp/chown ***]  
@@ -56,5 +56,5 @@ apt -y install kubeadm kubelet kubectl
   root@dlp:~# kubectl get nodes  
   # show state ⇒ OK if all are Running
   root@dlp:~# kubectl get pods -A  
-}
+}  
 #Worker node join follow on Master
