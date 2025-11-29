@@ -22,7 +22,7 @@ net.bridge.bridge-nf-call-ip6tables = 1
 net.bridge.bridge-nf-call-iptables = 1  
 EOF  
 
-root@dlp:~# sysctl –system  
+root@dlp:~# sysctl -–system  
 root@dlp:~# swapoff -a  
 root@dlp:~# vi /etc/fstab  
 # comment out swap line
