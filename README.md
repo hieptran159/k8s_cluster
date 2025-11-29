@@ -45,7 +45,8 @@ apt -y install kubeadm kubelet kubectl
 
 # In Master node   
 {  
-  kubeadm init --apiserver-advertise-address=198.18.1.30 --pod-network-cidr=198.244.0.0/16  
+  kubeadm init --apiserver-advertise-address=198.18.1.30 --pod-network-cidr=10.244.0.0/16
+  # --apiserver-advertise-address: IP master node, --pod-network-cidr same with the file flannel-yaml
   # set cluster admin user, if you set common user as cluster admin, login with it and run [sudo cp/chown ***]  
   root@dlp:~# mkdir -p $HOME/.kube  
   root@dlp:~# cp -i /etc/kubernetes/admin.conf $HOME/.kube/config  
