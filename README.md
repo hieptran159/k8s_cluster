@@ -4,7 +4,7 @@ sudo nano /etc/apt/sources.list: comment #deb….
 
 root@dlp:~#sudo apt -y install docker.io apt-transport-https
 # cgroup driver uses systemd
-root@dlp:~# sudo tee /etc/docker/daemon.json > /dev/null <<EOF
+root@dlp:~# ssudo tee /etc/docker/daemon.json > /dev/null <<EOF
 {
   "exec-opts": ["native.cgroupdriver=systemd"],
   "log-driver": "json-file",
@@ -14,6 +14,7 @@ root@dlp:~# sudo tee /etc/docker/daemon.json > /dev/null <<EOF
   "storage-driver": "overlay2"
 }
 EOF
+
 
 
 root@dlp:~# sudo systemctl restart docker  
