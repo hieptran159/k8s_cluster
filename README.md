@@ -25,6 +25,7 @@ net.bridge.bridge-nf-call-iptables = 1
 EOF
 
 
+
 root@dlp:~# sudo sysctl -–system  
 root@dlp:~# sudo swapoff -a  
 root@dlp:~# sudo vi /etc/fstab  
